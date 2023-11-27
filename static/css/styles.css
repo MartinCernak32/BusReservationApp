@@ -1,0 +1,15 @@
+
+body {
+    background-color: rgb(39, 38, 38);
+    color: white;
+}
+
+.navbar-custom {
+    background-color: rgb(19, 50, 108) !important;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-style: italic;
+}

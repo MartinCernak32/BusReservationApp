@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block title %}Make Reservation{% endblock %}
+
+{% block content %}
+
+
+
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-sm-12 col-md-8">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="alert alert-success">
+                        {{ messages[0] }}
+                    </div>
+                {% endif %}
+                {% endwith %}
+                <h1 class="text-center">Make your reservation here</h1>
+                <table class="table table-dark table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Location Start</th>
+                            <th>Location End</th>
+                            <th>Date Start</th>
+                            <th>Date Arrival</th>
+                            <th>Time Start</th>
+                            <th>Time End</th>
+                            <th>Bus Capacity</th>
+                            <th>Occupied Seats</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td><a href=""></td>
+                                <td>{{ bus.location_start }}</td>
+                                <td>{{ bus.location_end }}</td>
+                                <td>{{ bus.date_start }}</td>
+                                <td>{{ bus.date_arival }}</td>
+                                <td>{{ bus.time_start }}</td>
+                                <td>{{ bus.time_end }}</td>
+                                <td>{{ bus.buss_capacity }}</td>
+                                <td>{{ bus.occupied_seats }}</td>
+                                <td>{{ bus.price }}€</td>
+                              </tr>
+            
+                <div class="text-center"> <!-- Add text-center class here -->
+                    {{ render_form(form) }}
+                </div>
+                <p class="space-above text-center"><a href="{{ url_for('home')}}">See all busses</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
