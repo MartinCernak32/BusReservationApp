@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField, SelectField
 from wtforms.validators import DataRequired
+from werkzeug.utils import url_encode
 import os
 
 seats = list(range(1, 61))
